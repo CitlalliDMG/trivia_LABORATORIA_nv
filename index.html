@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-	<title>Nueva Trivia</title>
+
+	<meta charset="UTF-8">
+	<title>Nueva trivia</title>
+	<!--Aquí va el link al css-->
+	<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+	<!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">-->
+
 </head>
+
 <body>
 
 	<!--Esta parte es para preguntar el nombre-->
+	<form id="preguntaElNombre">
 	<h3 id="preguntaNombre">¿Cuál es tu nombre?</h3>
-	<input type="text" id="respuesta" value="Escribe tu nombre aquí">
+	<input type="text" id="respuesta" value="">
 	<button type="button" id="botonEnviar" onclick="respuestaNombre()">Enviar</button>
-	<p><div id="resultado"></div></p>
+	</form>
 
 	<!--Poner botones ¿Quieres jugar?-->
-	<p> <div id="preguntaJugar"></div></p>
-	<!--<button type="button" id="jugarSi" onclick="siQuiereJugar()">Sí</button>
-	<button type="button" id="jugarNo" onclick="noQuiereJugar()">No</button>-->
+	<form id="preguntaJuego">
+	<h2><div id="resultado"></div></h2>
+	<h3> <div id="preguntaJugar"></div></h3>
+	<button type="button" id="jugarSi" onclick="siQuiereJugar()">Sí</button>
+	<button type="button" id="jugarNo" onclick="noQuiereJugar()">No</button>
+	</form>
+
+	<!--Aquí va el link al js-->
 	<script src="js/app.js"></script>
 
 </body>
