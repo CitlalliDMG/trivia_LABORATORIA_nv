@@ -1,0 +1,33 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background: yellow;
+	text-align: center;
+	padding: 1em 0em;
+	border: 3px dashed black;
+}
+
+#content{
+	text-align: center;
+	margin: 1em;
+
+}
+
+.counter{
+	border: 1px solid black;
+	width: 50%;
+	height: 200px;
+	margin: 3% auto;
+
+}
+
+
+#askGame,
+#first-question,
+#second-question,
+#third-question,
+#results{
+	display: none;
+}

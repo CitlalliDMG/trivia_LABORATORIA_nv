@@ -6,30 +6,127 @@
 	<meta charset="UTF-8">
 	<title>Nueva trivia</title>
 	<!--Aquí va el link al css-->
-	<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
-	<!--<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
 
 <body>
 
-	<!--Esta parte es para preguntar el nombre-->
+	<!--Inicia header-->
+
+	<header>
+
+		<h1>Trivia LABORATORIA</h1>
+		<h2 id="welcome">Bienvenid@</h2>
+
+	</header>
+
+	<!--Termina header-->
+
+	<!--Aquí inicia el contenido que va cambiando de acuerdo a la respuesta del usuario-->
+
+	<section id=content>
+
+		<!--Inicia bloque nombre-->
+
+		<div id="askName">
+
+			<h3>¿Cuál es tu nombre?</h3>
+			<input type="text" id="userName" placeholder="Ingresa tu nombre aquí">
+			<button type="button" id="sendButton" onclick="answerName()">Enviar</button>
+
+		</div>
+		<!--Termina bloque nombre-->
+
+		<!--Inicia pregunta juego-->
+
+		<div id="askGame">
+
+			<h3>¿Quieres jugar?</h3>
+			<button type="button" id="gameYes" onclick="play()">Sí</button>
+			<button type="submit" id="gameNo" onclick="noPlay()">No</button>
+
+		</div>
+		<!--Termina pregunta juego-->
+
+		<!--Inicia primera pregunta-->
+
+		<form id=first-question>
+
+			<p>¿La fresa es una...?</p>
+			<input type="radio" name="fresa" id="fruta"> Fruta <br> <!--name sirve para solo seleccionar una opción-->
+			<input type="radio" name="fresa" id="verdura"> Verdura <br>
+			<input type="radio" name="fresa" id="infrutescencia"> Infrutescencia <br>
+			<button type="button" onclick="firstAnswer()">Enviar</button>
+			<p id="hola"></p>
+			
+		</form>
+
+		<!--Termina primera pregunta-->
+
+		<!--Inicia segunda pregunta-->
+		
+		<form id=second-question>
+
+			<p>¿La sandia crece..?</p>
+			<input type="radio" name="sandia" id="enredadera"> En una enrededera <br> 
+			<input type="radio" name="sandia" id="arbol"> En un árbol <br>
+			<input type="radio" name="sandia" id="tierra"> Bajo tierra <br>
+			<button type="button" onclick="secondAnswer()">Enviar</button>
+			
+		</form>
+
+		<!--Termina segunda pregunta-->
+
+		<!--Inicia segunda pregunta-->
+		
+		<form id=third-question>
+
+			<p>¿El aguacate es...?</p>
+			<input type="radio" name="aguacate" id="tuberculo"> Un tuberculo <br> 
+			<input type="radio" name="aguacate" id="faguacate"> Una fruta <br>
+			<input type="radio" name="aguacate" id="vaguacate"> Una verdura <br>
+			<button type="button" onclick="thirdAnswer()">Enviar</button>
+			
+		</form>
+
+		<!--Termina segunda pregunta-->
+
+		<!--Inicia resultados-->
+		
+		<div id="results">
+			
+			<h3>Tus resultados</h3>
+			<div id="correct-answers" class="counter"></div> <!--Para mostrar número de respuesta correctas-->
+			<div id="incorrectAnswers" class="counter"></div> <!--Para mostrar número de respuesta incorrectas--> 
+
+		</div>
+
+		<!--Termina resultados-->
+
+	</section>
+
+	<!--Aquí va el link al js-->
+	<script src="js/app.js"></script>
+
+	<!--Aquí termina el contenido que va cambiando de acuerdo a la respuesta del usuario-->
+
+
+	<!--Esta parte es para preguntar el nombre
 	<form id="preguntaElNombre">
 	<h3 id="preguntaNombre">¿Cuál es tu nombre?</h3>
 	<input type="text" id="respuesta" value="">
 	<button type="button" id="botonEnviar" onclick="respuestaNombre()">Enviar</button>
 	</form>
 
-	<!--Poner botones ¿Quieres jugar?-->
+	Poner botones ¿Quieres jugar?
 	<form id="preguntaJuego">
 	<h2><div id="resultado"></div></h2>
 	<h3> <div id="preguntaJugar"></div></h3>
-	<button type="button" id="jugarSi" onclick="siQuiereJugar()">Sí</button>
+	*<button type="button" id="jugarSi" onclick="siQuiereJugar()">Sí</button>
 	<button type="button" id="jugarNo" onclick="noQuiereJugar()">No</button>
-	</form>
-
-	<!--Aquí va el link al js-->
-	<script src="js/app.js"></script>
+	</form>-->
 
 </body>
 </html>
