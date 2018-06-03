@@ -11,18 +11,37 @@ header{
 
 #content{
 	text-align: center;
-	margin: 1em;
+	/*margin: 1em;*/
+	border: 0.1em solid black;
+    width: 50%;
+    display: block;
+    margin: 3% auto;
+    padding: 3em;
+    background-color: #a9a9a9;
 
+}
+
+p{
+	font-weight: bold;
+}
+
+.question,
+#gameYes,
+#gameNo{
+	background: yellow;
+	font-weight: : bold;
+	font-size: 1em;
 }
 
 .counter{
 	border: 1px solid black;
 	width: 50%;
-	height: 200px;
+	height: 100px;
 	margin: 3% auto;
+	background: white;
+	vertical-align: middle;
 
 }
-
 
 #askGame,
 #first-question,

@@ -9,15 +9,24 @@ var results = document.getElementById("results");
 var correctCounter = 0;
 var incorrectCounter = 0;
 var correctAnswers = document.getElementById("correct-answers");
-var incorrectAnswers = document.getElementById("incorrectAnswers");
+var incorrectAnswers = document.getElementById("incorrect-answers");
 
 //Se activa cuando el usuario ingresa su nombre
 function answerName(){
 
 	var userName = document.getElementById("userName").value.toUpperCase();
-	welcome.innerHTML = "Bienvenid@ " + userName;
-	askName.style.display = "none";
-	askGame.style.display = "block";
+
+    if (userName == "") {
+
+        alert("Por favor asegurate de ingresar tu nombre");
+
+    } else {
+
+	   welcome.innerHTML = "Bienvenid@ " + userName;
+	   askName.style.display = "none";
+	   askGame.style.display = "block";
+
+    }
 
 }
 

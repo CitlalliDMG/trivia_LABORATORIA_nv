@@ -34,7 +34,7 @@
 
 			<h3>¿Cuál es tu nombre?</h3>
 			<input type="text" id="userName" placeholder="Ingresa tu nombre aquí">
-			<button type="button" id="sendButton" onclick="answerName()">Enviar</button>
+			<button type="button" id="sendButton" class="question" onclick="answerName()" autofocus="">Enviar</button>
 
 		</div>
 		<!--Termina bloque nombre-->
@@ -55,11 +55,14 @@
 		<form id=first-question>
 
 			<p>¿La fresa es una...?</p>
-			<input type="radio" name="fresa" id="fruta"> Fruta <br> <!--name sirve para solo seleccionar una opción-->
-			<input type="radio" name="fresa" id="verdura"> Verdura <br>
-			<input type="radio" name="fresa" id="infrutescencia"> Infrutescencia <br>
-			<button type="button" onclick="firstAnswer()">Enviar</button>
-			<p id="hola"></p>
+			<input type="radio" name="fresa" id="fruta"> <!--name sirve para solo seleccionar una opción-->
+			<label for="fruta">Fruta</label><br> <!-- LABEL sirve para que puedan seleccionar la respuesta dando click en el circulo o en el texto"-->
+			<input type="radio" name="fresa" id="verdura">
+			<label for="verdura">Verdura</label><br>
+			<input type="radio" name="fresa" id="infrutescencia">
+			<label for="infrutescencia">Infrutescencia</label><br><br>
+			<button type="button" class="question" onclick="firstAnswer()">Enviar</button>
+			<!--<p id="hola"></p>-->
 			
 		</form>
 
@@ -70,10 +73,13 @@
 		<form id=second-question>
 
 			<p>¿La sandia crece..?</p>
-			<input type="radio" name="sandia" id="enredadera"> En una enrededera <br> 
-			<input type="radio" name="sandia" id="arbol"> En un árbol <br>
-			<input type="radio" name="sandia" id="tierra"> Bajo tierra <br>
-			<button type="button" onclick="secondAnswer()">Enviar</button>
+			<input type="radio" name="sandia" id="enredadera">
+			<label for="enredadera">En una enredadera</label><br> 
+			<input type="radio" name="sandia" id="arbol">
+			<label for="arbol">En un árbol</label><br>
+			<input type="radio" name="sandia" id="tierra">
+			<label for="tierra">Bajo tierra</label><br><br>
+			<button type="button" class="question" onclick="secondAnswer()">Enviar</button>
 			
 		</form>
 
@@ -84,10 +90,13 @@
 		<form id=third-question>
 
 			<p>¿El aguacate es...?</p>
-			<input type="radio" name="aguacate" id="tuberculo"> Un tuberculo <br> 
-			<input type="radio" name="aguacate" id="faguacate"> Una fruta <br>
-			<input type="radio" name="aguacate" id="vaguacate"> Una verdura <br>
-			<button type="button" onclick="thirdAnswer()">Enviar</button>
+			<input type="radio" name="aguacate" id="tuberculo">
+			<label for="tuberculo">Un tuberculo</label><br> 
+			<input type="radio" name="aguacate" id="faguacate">
+			<label for="faguacate">Una fruta</label><br>
+			<input type="radio" name="aguacate" id="vaguacate">
+			<label for="vaguacate">Una verdura</label><br><br>
+			<button type="button"  class="question"onclick="thirdAnswer()">Enviar</button>
 			
 		</form>
 
@@ -99,7 +108,7 @@
 			
 			<h3>Tus resultados</h3>
 			<div id="correct-answers" class="counter"></div> <!--Para mostrar número de respuesta correctas-->
-			<div id="incorrectAnswers" class="counter"></div> <!--Para mostrar número de respuesta incorrectas--> 
+			<div id="incorrect-answers" class="counter"></div> <!--Para mostrar número de respuesta incorrectas--> 
 
 		</div>
 
